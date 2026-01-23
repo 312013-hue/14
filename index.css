@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+p{
+    color: rgb(0, 68, 255);
+
+}
+h1 a{
+    color: rgb(16, 77, 243);
+    text-decoration: none;
+}
+body{
+    background-color: rgb(178, 186, 233);
+}
+header,aside,main,footer{
+    border-radius:25px ;
+    margin: 30px;
+    box-shadow: 5px 5px 5px 4px #717272;
+}
+aside,main{
+    margin: 30px;
+}
+header{
+    /* 保持原樣 */
+    margin: auto;
+    width: 80%;
+    height: 200px;
+    background-color: rgb(110, 241, 250);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    /* 建議為標題加入一些邊距，避免太靠近導覽列 */
+    margin-bottom: 10px;
+}
+nav ul{
+    /* 保持原樣 */
+    display: flex;
+    margin-top: 30px;
+}
+
+nav ul li{
+    /* 保持原樣 */
+    margin: 0 30px;
+    font-size: 1.2em;
+    list-style: none;
+    /* 為了讓邊框效果呈現，需要設定 position: relative */
+    position: relative; 
+}
+
+nav ul li a{
+    /* 將 a 標籤設定為區塊元素，並繼承 li 的顏色 */
+    display: block; 
+    text-decoration: none; /* 移除預設底線 */
+    color: rgb(120, 101, 230); /* 保持文字顏色 */
+    padding: 5px 0; /* 增加點擊區域 */
+
+    /* === 核心修改：加入過渡效果 (Transition) === */
+    /* 讓顏色和邊框的變化在 0.3 秒內平滑地完成 */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* 1. 滑鼠移入文字變色效果 (顏色變化) */
+nav ul li a:hover {
+    color: rgb(255, 0, 100); /* 移入時的文字顏色 (例如：變成亮紅色) */
+    /* 稍微縮放或抬升效果，增加互動性 */
+    transform: translateY(-2px); 
+}
+
+/* 2. 底部滑入邊框效果 */
+
+/* 先定義一個看不見的邊框元素 */
+nav ul li a::after {
+    content: ''; /* 偽元素必須有 content 屬性 */
+    position: absolute;
+    bottom: 0; /* 定位在底部 */
+    left: 0; /* 從左邊開始 */
+    width: 0; /* 預設寬度為 0 (隱藏) */
+    height: 3px; /* 邊框厚度 */
+    background-color: rgb(255, 0, 100); /* 邊框顏色 */
+
+    /* === 核心修改：加入過渡效果 (Transition) === */
+    /* 讓寬度的變化在 0.3 秒內平滑地完成 */
+    transition: width 0.3s ease;
+}
+
+/* 滑鼠移入時，將邊框寬度從 0 變為 100% */
+nav ul li a:hover::after {
+    width: 100%;
+}
+#box1{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+aside{
+    width: 25%;
+    height: 600px;
+    background-color: #86cef8;
+}
+#photo{
+    width: 130px;
+    height: 130px;
+    background-color: rgb(134, 132, 247);
+    border-radius: 130px;
+    margin: auto;
+    margin-top: 10px;
+    border: 10px #701ff1 solid;
+
+    overflow: hidden;
+}
+#photo img{
+    width: 280px;
+    position: relative;
+    bottom: 20px;
+    right: 97px;
+}
+aside p {
+    text-align: center;
+    margin-top: 20px;
+    line-height: 20px;
+}
+#a_text{
+    padding: 0 20px;
+    text-align: left;
+}
+main{
+    width: 75%;
+    background-color: rgba(136, 124, 241, 0.726);
+    padding: 20px;
+}
+.s1{
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+}
+.s1 img{
+    width: 50%;
+    display: block;
+}
+.s1:nth-of-type(2){
+    flex-direction: row-reverse;
+}
+.s1:nth-of-type(1) img{
+    margin-right: 20px;
+}
+.s1:nth-of-type(2) img{
+    margin-left: 20px;
+}
+footer{
+    margin: auto;
+    width: 80%;
+    height: 100px;
+    background-color: rgb(199, 221, 255);
+    text-align: center;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.newsDiv{
+    margin: 20px 0;
+    display: flex;
+}
+.newsImg{
+    width: 110px;
+    height: 110px;
+    background-color: azure;
+}
+.newsTxt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+.newsImg{
+    width: 110px;
+    height: 110px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15PX;
+}
+.newsDiv:nth-of-type(1) .newsImg{
+    background-image: url(img/4.jpg);
+    background-position: 0 0;
+}
+.newsDiv:nth-of-type(2) .newsImg{
+    background-image: url(img/5.jpg);
+    background-position: 0 0;
+}
+.newsDiv:nth-of-type(3) .newsImg{
+    background-image: url(img/6.jpg);
+    background-position: 0 0;
+}
+.newsDiv:nth-of-type(4) .newsImg{
+    background-image: url(img/7.jpg);
+    background-position: 0 0;
+}
+.newsTxt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.newsTxt button{
+    align-self: flex-end;
+    width: 100px;
+    padding: 8px 0;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s, transform .2s;
+}
+
+.newsTxt button:hover{
+    transform: translateY(-2px);
+}
+@media (max-width: 768px){
+    .newsTxt button{
+        align-self: stretch; /* 手機版滿寬 */
+        width: 100%;
+    }
+}
+

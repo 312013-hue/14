@@ -1,0 +1,58 @@
+/* ===== main 容器 ===== */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* ===== 單一興趣區塊 ===== */
+.interest {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    gap: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.interest:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== 圖片設定（限制寬度） ===== */
+.interest img {
+    width: 260px;        /* 最大寬度 */
+    max-width: 40%;      /* 不超過區塊的 40% */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+/* ===== 文字區塊 ===== */
+.interest h2 {
+    color: #1e3a5f;
+    margin-bottom: 10px;
+}
+
+.interest p {
+    line-height: 1.8;
+    color: #444;
+}
+
+/* ===== 手機版 RWD ===== */
+@media (max-width: 768px) {
+    .interest {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .interest img {
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+    }
+}

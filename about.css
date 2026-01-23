@@ -1,0 +1,147 @@
+.news1 h1{ 
+    font-size: 35px;
+} 
+.Img1 img{
+    width: 70%;
+    height: auto;
+    padding: 20px;
+    margin-top: 20px;
+    margin: auto;
+    display: block;
+}
+.news2{
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+}
+.news2 p{
+    margin-right: 20px;
+    font-size: 16px;
+}
+.news2 img{
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    margin-left: auto;
+    display: block;
+}
+.news3 h1{
+    font-size: 35px;
+}
+.re1{
+    margin-top: 10px;
+    width: 400px;
+    height: 400px;
+    border-style: double;
+    background-color: aliceblue;
+
+}
+.re2{
+    margin-top: 10px;
+    width: 400px;
+    height: 400px;
+    border-style: double;
+    background-color: aliceblue;
+    margin-left: 10px;
+
+}
+.see1{
+    display: flex;
+}
+.re3{
+    margin-top: 10px;
+    width: 400px;
+    height: 400px;
+    border-style: double;
+    background-color: aliceblue;
+
+}
+.re4{
+    margin-top: 10px;
+    width: 400px;
+    height: 400px;
+    border-style: double;
+    background-color: aliceblue;
+    margin-left: 10px;
+}
+.see2{
+    display: flex;
+}
+.re1 img{
+    
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-radius: 50%;
+    padding: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.see1 h3{
+    text-align: center;
+}
+.see1 p{
+    text-align: center;
+    margin-left: 10px;
+    color: black;
+}
+.re1 img{
+    
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-radius: 50%;
+    padding: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.see1 h3{
+    text-align: center;
+}
+.see1 p{
+    text-align: center;
+    margin-left: 10px;
+    color: black;
+}
+.re2 img{
+    
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-radius: 50%;
+    padding: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.re3 img{    
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-radius: 50%;
+    padding: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.re4 img{
+    
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-radius: 50%;
+    padding: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.see2 h3{
+    text-align: center;
+}
+.see2 p{
+    text-align: center;
+    margin-left: 10px;
+    color: black;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="相簿.css">
+    <title>處二孝14鄭宇珊</title>
+<link rel="stylesheet" href="rwd.css"></head>
+<body>
+<header>
+    <h1><a href="index.html">處二孝14鄭宇珊</a></h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">關於我</a></li>
+                <li><a href="like.html">我的興趣</a></li>
+                <li><a href="專長.html">我的專長</a></li>
+                <li><a href="相簿.html">我的相簿</a></li>
+                <li><a href="聯絡.html">聯絡我</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="box1">
+        <aside>
+            <div id="photo"><img src="img/1.jpg" alt=""></div>
+                <p><b>姓名：</b>綠谷出久</p>
+                <p><b>生日：</b>7月15日</p>
+                <p><b>能力：</b>One For All</p>
+                <p id="a_text">綠谷出久；英雄名deku。在80%的人都擁有「個性」的未來，天生無「個性」的他立志要成為英雄。在繼承歐爾麥特的「個性」之後，終於考進了雄英高中。</p>
+        </aside>
+        <main>
+                <section class="gallery-header">
+                    <h2>我的相簿</h2>
+                    <p>探索我們精選的視覺饗宴。</p>
+                </section>
+           <section class="image-gallery">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="img/4.jpg" alt="爆豪勝己" data-full="img/4.jpg">
+                            <div class="caption">爆豪勝己</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/5.jpg" alt="轟焦凍" data-full="img/5.jpg">
+                            <div class="caption">轟焦凍</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/6.jpg" alt="飯田天哉" data-full="img/6.jpg">
+                            <div class="caption">飯田天哉</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/7.jpg" alt="歐爾麥特" data-full="img/7.jpg">
+                            <div class="caption">歐爾麥特</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/8.jpg" alt="綠谷出久爆走" data-full="img/8.jpg">
+                            <div class="caption">綠谷出久爆走</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/9.jpg" alt="綠谷出久普通" data-full="img/9.jpg">
+                            <div class="caption">綠谷出久普通</div>
+                        </div>
+                        </div>
+                </section>
+           <div id="lightbox" class="lightbox">
+                    <span class="close-btn">&times;</span>
+                    <img class="lightbox-content" id="lightbox-img" src="" alt="">
+                    <div id="lightbox-caption" class="lightbox-caption"></div>
+                </div>
+           
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const galleryItems = document.querySelectorAll('.gallery-item img');
+                    const lightbox = document.getElementById('lightbox');
+                    const lightboxImg = document.getElementById('lightbox-img');
+                    const lightboxCaption = document.getElementById('lightbox-caption');
+                    const closeBtn = document.querySelector('.close-btn');
+           
+                    galleryItems.forEach(item => {
+                        item.addEventListener('click', () => {
+                            lightbox.style.display = 'flex';
+                            lightboxImg.src = item.dataset.full; // 使用 data-full 屬性獲取大圖連結
+                            lightboxCaption.innerHTML = item.alt;
+                        });
+                    });
+           
+                    closeBtn.addEventListener('click', () => {
+                        lightbox.style.display = 'none';
+                    });
+           
+                    // 點擊燈箱外部區域也關閉
+                    lightbox.addEventListener('click', (e) => {
+                        if (e.target === lightbox) {
+                            lightbox.style.display = 'none';
+                        }
+                    });
+           
+                    // 鍵盤 ESC 關閉燈箱
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+                            lightbox.style.display = 'none';
+                        }
+                    });
+                });
+            </script>
+    
+          </main>
+          
+    </div>
+    <footer>
+        <p>Copyright © 我是鄭宇珊 All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
